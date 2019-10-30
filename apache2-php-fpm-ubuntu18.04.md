@@ -19,7 +19,8 @@ Install Apache2, PHP7-FPM, MYSQL On Ubuntu 18.04
 * sudo a2dissite 000-default
 * sudo a2enmod proxy_fcgi
 * vi /etc/apache2/sites-available/site-01.conf
-`<VirtualHost *:80>
+
+<VirtualHost *:80>
      ServerName External_IP_Address
      DocumentRoot /var/www/html
 
@@ -35,7 +36,8 @@ Install Apache2, PHP7-FPM, MYSQL On Ubuntu 18.04
  
       ErrorLog ${APACHE_LOG_DIR}/error.log
       CustomLog ${APACHE_LOG_DIR}/access.log combined  
-</VirtualHost> `
+</VirtualHost>
+
 * sudo a2ensite site-01.conf
 * sudo service apache2 restart
 
